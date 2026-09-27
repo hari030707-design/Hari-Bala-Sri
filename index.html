@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hari Bala Sri . V</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131F;
+    --surface:#181C2C;
+    --line:#2A2F45;
+    --text:#E9E8F2;
+    --muted:#9096B0;
+    --amber:#E8A33D;
+    --teal:#4FD1C5;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:inherit;margin:0;padding:0;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  html,body{height:100%;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Space Grotesk',system-ui,sans-serif;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  /* Hero */
+  header.hero{
+    padding:72px 0 56px;
+    border-bottom:1px solid var(--line);
+  }
+  .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--amber);
+    letter-spacing:.02em;
+    margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(34px,7vw,54px);
+    font-weight:700;
+    line-height:1.08;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    margin-top:14px;
+    font-size:17px;
+    color:var(--muted);
+    max-width:46ch;
+  }
+  .role strong{color:var(--text);font-weight:500;}
+  .staff{
+    margin-top:32px;
+    width:140px;height:6px;
+    background:linear-gradient(90deg,var(--amber),transparent);
+    border-radius:3px;
+  }
+
+  section{padding:48px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:22px;
+  }
+
+  /* About / education */
+  .edu{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px;
+  }
+  .edu-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .edu-school{font-weight:600;font-size:16px;}
+  .edu-loc{color:var(--muted);font-size:14px;margin-top:2px;}
+  .edu-year{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--teal);
+    white-space:nowrap;
+  }
+
+  /* Projects */
+  .project{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:18px;
+    padding:20px 0;
+    border-top:1px solid var(--line);
+  }
+  .project:first-of-type{border-top:none;padding-top:0;}
+  .p-mark{
+    width:34px;height:34px;border-radius:8px;
+    background:var(--surface);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--teal);
+    flex-shrink:0;
+  }
+  .p-title{font-weight:600;font-size:17px;}
+  .p-tool{color:var(--amber);font-size:13px;font-family:'IBM Plex Mono',monospace;margin-top:3px;}
+  .p-desc{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:56ch;}
+
+  /* Achievements + extracurricular as a quiet list */
+  .line-item{
+    display:flex;gap:14px;align-items:baseline;
+    padding:12px 0;border-top:1px solid var(--line);
+  }
+  .line-item:first-child{border-top:none;padding-top:0;}
+  .li-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:8px;}
+  .li-title{font-weight:500;}
+  .li-sub{color:var(--muted);font-size:14px;margin-top:2px;}
+
+  /* Skills */
+  .skills{display:flex;flex-wrap:wrap;gap:10px;}
+  .skill{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    padding:7px 12px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    color:var(--muted);
+  }
+
+  footer{
+    padding:48px 0 64px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  footer a{color:var(--teal);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .foot-name{font-weight:600;font-size:16px;color:var(--text);}
+  .foot-note{color:var(--muted);font-size:13px;margin-top:10px;}
+
+  @media (prefers-reduced-motion:no-preference){
+    header.hero h1{animation:rise .6s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="tag mono">portfolio</div>
+    <h1>Hari Bala Sri . V</h1>
+    <p class="role">Second-year <strong>CS &amp; AI/ML</strong> student at Government College of Technology, Coimbatore — building small, working things in C, app-builders, and game tools, and training in Silambam outside the classroom.</p>
+    <div class="staff"></div>
+  </header>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu">
+      <div class="edu-row">
+        <div>
+          <div class="edu-school">Government College of Technology</div>
+          <div class="edu-loc">Coimbatore — B.Sc/B.E. Computer Science (AI &amp; ML)</div>
+        </div>
+        <div class="edu-year mono">2nd year</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="p-mark mono">C</div>
+      <div>
+        <div class="p-title">Phone Book Management System</div>
+        <div class="p-tool">C programming — mini project</div>
+        <p class="p-desc">A command-line contact manager built in first year: add, search, update and delete contact records using structs and file handling.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-mark mono">TTS</div>
+      <div>
+        <div class="p-title">Text-to-Speech Converter</div>
+        <div class="p-tool">MIT App Inventor</div>
+        <p class="p-desc">A mobile app that reads typed text aloud, built visually as an early hands-on project in app development.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-mark mono">GD</div>
+      <div>
+        <div class="p-title">Memory Card Game</div>
+        <div class="p-tool">GDevelop</div>
+        <p class="p-desc">A 2D memory-matching game with flip animations and score tracking, built without traditional code using GDevelop's event system.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="line-item">
+      <div class="li-dot"></div>
+      <div>
+        <div class="li-title">Smart India Hackathon (SIH) 2026 — Participant</div>
+        <div class="li-sub">Took part in the national-level hackathon problem-solving round.</div>
+      </div>
+    </div>
+    <div class="line-item">
+      <div class="li-dot"></div>
+      <div>
+        <div class="li-title">Intra-college event — Shortlisted</div>
+        <div class="li-sub">Cleared the shortlisting round of a college-level competition.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="extracurricular">
+    <h2>Beyond the classroom</h2>
+    <div class="line-item">
+      <div class="li-dot" style="background:var(--amber);"></div>
+      <div>
+        <div class="li-title">Silambam</div>
+        <div class="li-sub">Practitioner of the traditional Tamil martial art, performed with a bamboo staff.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Tools &amp; skills</h2>
+    <div class="skills">
+      <span class="skill">C</span>
+      <span class="skill">MIT App Inventor</span>
+      <span class="skill">GDevelop</span>
+      <span class="skill">Problem solving</span>
+      <span class="skill">Hackathons</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-name">Get in touch</div>
+    <a href="mailto:hari030707@gmail.com">hari030707@gmail.com</a>
+    <a href="tel:+918056127320">+91 80561 27320</a>
+    <div class="foot-note">Coimbatore, Tamil Nadu</div>
+  </footer>
+</div>
+
+</body>
+</html>
